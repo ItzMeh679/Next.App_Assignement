@@ -1,0 +1,146 @@
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buttonContainer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: white;
+  background-color: #00C4FF;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.btnInteractive {
+  color: white;
+  font-weight: 500;
+  background: #00C4FF;
+  box-shadow: 0px 17px 18px -14px rgba(0, 0, 0, 0.08);
+  border-radius: 50px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btnInteractive:hover {
+  background-color: white;
+  color: #2C3940;
+  box-shadow: 0px 17px 18px -14px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.btnInteractive::before, .btnInteractive::after {
+  content: '';
+  position: absolute;
+  background: hsla(210, 100%, 50%, 0.8);
+  border-radius: 50%;
+  opacity: 0;
+  animation: animate 1s infinite;
+}
+
+.btnInteractive::before {
+  width: 6px;
+  height: 6px;
+  top: 20%;
+  left: 20%;
+}
+
+.btnInteractive::after {
+  width: 6px;
+  height: 6px;
+  bottom: 20%;
+  right: 20%;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+.ezexText {
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  border: 2px solid white;
+  padding: 20px;
+}
+
+.nameText {
+  font-size: 60px;
+  margin-top: 100px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.buttonContainer {
+  margin-top: 50px;
+}
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  color: white;
+}
+
+.btnOne {
+  transition: all 0.3s;
+  position: relative;
+}
+
+.btnOne:hover {
+  transform: scale(1.1);
+}
+/* Fade-in animation for the header */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Button hover animation */
+.button:hover {
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
