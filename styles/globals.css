@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .animate-gradient {
+    background: linear-gradient(-45deg, #1b1b1b, #2c2c2c, #333333, #1b1b1b);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-[#1b1b1b] text-white;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
