@@ -1,2 +1,4 @@
 # Ignore node_modules
 node_modules/
+# Ignore only the specific file
+node_modules/@next/swc-win32-x64-msvc/next-swc.win32-x64-msvc.node
